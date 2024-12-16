@@ -1,4 +1,4 @@
-# nba-gazette
+# nba-vards
 
 
 
