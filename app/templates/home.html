@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>NBA Yesterday Games</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+    </head>
+    <body>
+        <main>
+            <table id="scoreboard">
+                <caption>Game Results</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Away</th>
+                        <th scope="col">Score</th>
+                        <th scope="col">Home</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in range(games|length - 1) %}
+                        <tr>
+                            <td>{{ games[i]['TEAM_CITY_NAME'] }} {{ games[i]['TEAM_NAME'] }}</td>
+                            <td>{{ games[i]['PTS'] }}:{{ games[i + 1]['PTS'] }}</td>
+                            <td>{{ games[i + 1]['TEAM_CITY_NAME'] }} {{ games[i + 1]['TEAM_NAME'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>
