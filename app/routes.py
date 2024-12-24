@@ -1,9 +1,9 @@
 from flask import Flask, render_template
-import boxscore
+from app import boxscore
+from . import app  # Import Flask application
 
-app = Flask(__name__)
 
 @app.route("/")
 def home():
     return render_template('home.html', 
-                           games=boxscore.get_yesterdays_games())
+                        games=boxscore.get_yesterdays_games())
