@@ -1,0 +1,11 @@
+stages:
+ - build
+
+docker_build:
+  stage: build
+  tags: 
+    - local
+  script:
+    - echo "hello"
+    
+
