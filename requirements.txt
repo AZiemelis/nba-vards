@@ -1,11 +1,5 @@
-soupsieve~=2.6
-pip~=24.3.1
-numpy~=1.26.4
-charset-normalizer~=3.4.0
-certifi~=2024.12.14
-nba_api~=1.6.1
-requests~=2.32.3
-urllib3~=2.2.3
-idna~=3.10
-flask~=3.1.0
-jinja2~=3.1.5
+Flask==3.1.0
+gunicorn==23.0.0
+Jinja2==3.1.5
+nba_api==1.6.1
+python-dotenv==1.0.1
