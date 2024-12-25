@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nba-vards
+  labels:
+    app: nba-vards
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nba-vards
+  template:
+    metadata:
+      labels:
+        app: nba-vards
+    spec:
+      containers:
+        - name: nba-vards
+          image: aziemelis/nba-vards
+          ports:
+          - containerPort: 8000
+          env:
+            - name: FLASK_ENV
+              value: "production"
