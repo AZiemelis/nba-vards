@@ -18,7 +18,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for i in range(games|length - 1) %}
+                    {% for i in range(0, games|length - 1, 2) %}
                         <tr>
                             <td>{{ games[i]['TEAM_CITY_NAME'] }} {{ games[i]['TEAM_NAME'] }}</td>
                             <td>{{ games[i]['PTS'] }}:{{ games[i + 1]['PTS'] }}</td>
