@@ -1,0 +1,4 @@
+service:
+  type: NodePort
+  port: 3000
+  nodePort: 30000
