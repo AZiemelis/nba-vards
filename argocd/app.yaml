@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/AZiemelis/nba-vards.git
-    targetRevision: HEAD
+    targetRevision: main
     path: k8s/nba-vards
   destination:
     server: https://kubernetes.default.svc
